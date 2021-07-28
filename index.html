@@ -1,209 +1,76 @@
-:root {
-    --Linear: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-    --VeryLightGrayishBlue: hsl(240, 78%, 98%);
-    --LightGrayishBlue: hsl(234, 14%, 74%);
-    --GrayishBlue: hsl(233, 13%, 49%);
-    --DarkGrayishBlue: hsl(232, 13%, 33%);
-    --font: 'Montserrat', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font);
-    background-image: url(images/bg-top.svg);
-    background-position:  45vw -45px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: var(--VeryLightGrayishBlue);
-}  
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} 
-
-/* the button */
-
-.changemtoy {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 60px auto 0 auto;
-}
-
-.changemtoy h1 {
-    color: var(--GrayishBlue);
-}
-
-.changemtoy span {
-    margin: 0 29px;
-    font-weight: bold;
-    color: var(--LightGrayishBlue);
-}
-
-.slidcontent {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.theslide {
-    width: 60px;
-    height: 35px;
-    background: var(--Linear);
-    border-radius: 20px;    
-    
-}
-
-.thecircle {
-    height: 27px;
-    width: 27px;
-    border-radius: 50%;
-    margin: 3.8px 0 0 28px;
-    background: var(--VeryLightGrayishBlue);
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-}
-
-/* the boxs */
-
-.praicelist {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 60px 0;
-}
-
-.box {
-    background: white;
-    width: 350px;
-    height: 450px;
-    border-radius: 10px;
-    margin: 20px 0;
-    padding: 25px;
-}
-
-.box .fun {
-    color: var(--DarkGrayishBlue);
-    font-size: 2.5rem;
-}
-
-.fun span {
-    font-size: 4rem;
-    padding: 20px 10px;   
-}
-
-.box p {
-    margin: 10px 0px;
-    font-size: 1rem;
-    font-weight: bolder;
-    color: var(--GrayishBlue);
-}
-
-hr {
-    margin: 20px 0;
-    opacity: .4;
-    color: var(--VeryLightGrayishBlue);
-}
-
-.box button {
-    width: 100%;
-    height: 40px;
-    border: none;
-    background: var(--Linear);
-    border-radius: 5px;
-    color: var(--VeryLightGrayishBlue);
-    font-size: .8rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-/* the middle box */
-
-.Professional {
-    background: var(--Linear);
-    color: white;
-}
-
-.Professional .fun, .Professional p {
-    color: var(--VeryLightGrayishBlue);
-}
-
-.Professional button {
-    background: var(--VeryLightGrayishBlue);
-    color: hsl(237, 63%, 64%);
-    
-}
-
-
- /* hovers */
-
- .theslide:hover {
-     opacity: .8;
- }
-
- .box button:hover {
-    background: var(--VeryLightGrayishBlue);
-    color: hsl(237, 63%, 64%);
-    border: 1px solid;
- }
-
- .Professional button:hover {
-    background: var(--Linear);
-    color: var(--VeryLightGrayishBlue);
-    border: 1px solid white;
- }
-
- /* java */
-
-
-.onbtn {
-    margin-left: 4px;
-}
-
-
-
-
-@media only screen and (min-width: 1080px){
-    body {
-        background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
-        background-position: right top,  left bottom;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-color: var(--VeryLightGrayishBlue);
-        height: 100vh;
-        width: 100vw;
-    }
-
-    main {
-        border-image: unset;
-        background: unset;
-    }
-
-
-    .praicelist {
-        flex-direction: row;
-    }
-    .Professional {
-        height: 480px;
-    }
-
-    .Professional button {
-        margin-top: 25px;
-    }
-}
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+       <!-- slide month to annully -->
+        <div class="changemtoy">
+          <h1>Our Pricing</h1>
+          <!-- slide out side and month  annully -->
+          <div class="slidcontent">
+            <span>Annually</span>
+            <!-- slide inside -->
+            <div class="theslide">
+              <div class="thecircle"></div>
+            </div>
+            <span>Monthly</span>
+          </div>
+        </div>
+        <!-- the boxs -->
+        <div class="praicelist">
+          <div class="box">
+            <p>Basic</p>
+            <h1 class="fun">$<span class="price1">19.99</span></h1>
+            <hr>
+            <p >500 GB Storage</p>
+            <hr>
+            <p >2 Users Allowed</p>
+            <hr>          
+            <p >Send up to 3 GB</p>
+            <hr>
+            <button>Learn More</button>
+          </div>
+          <div class="Professional box">
+            <p>Professional</p>
+            <h1 class="fun">$<span class="price2">24.99</span></h1>
+            <hr>
+            <p  >1 TB Storage</p>
+            <hr>
+            <p ">2 Users Allowed</p>
+            <hr>
+            <p >Send up to 10 GB</p>
+            <hr>
+            <button>Learn More</button>
+          </div>
+          <div class="box">
+            <p>Master</p>
+            <h1 class="fun">$<span class="price3">39.99</span></h1>
+            <hr>
+            <p ">2TB Storage</p>
+            <hr> 
+            <p >10 Users Allowed</p>
+            <hr>
+            <p >Send up to 20 GB</p>
+            <hr>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js.js"></script>
+  </body>
+</html>
